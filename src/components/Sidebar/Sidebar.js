@@ -52,7 +52,7 @@ export default function Sidebar(props) {
             activeClassName="active"
             key={key}
           >
-            <ListItem button className={classes.itemLink + listItemClasses}>
+            <ListItem button className={classes.itemLink + listItemClasses} data-testid="sidebar-background">
               {typeof prop.icon === "string" ? (
                 <Icon
                   className={classNames(classes.itemIcon, whiteFontClasses, {

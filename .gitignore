@@ -26,3 +26,7 @@ yarn-error.log*
 package-lock.json
 
 commit.sh
+
+# cypress
+cypress/screenshots
+cypress/videos

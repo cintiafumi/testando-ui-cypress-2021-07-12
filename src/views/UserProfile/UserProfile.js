@@ -72,6 +72,7 @@ export default function UserProfile() {
                       fullWidth: true,
                     }}
                     inputProps={{
+                      "data-testid": "username-input",
                       onChange: (e) =>
                         setFormData({ ...formData, username: e.target.value }),
                     }}
@@ -82,6 +83,7 @@ export default function UserProfile() {
                     labelText="Job Title"
                     id="city"
                     formControlProps={{
+                      "data-testid": "jobtitle-input",
                       fullWidth: true,
                       onChange: (e) =>
                         setFormData({ ...formData, jobTitle: e.target.value }),
@@ -95,6 +97,7 @@ export default function UserProfile() {
                     labelText="Full Name"
                     id="name"
                     formControlProps={{
+                      "data-testid": "fullname-input",
                       fullWidth: true,
                       onChange: (e) =>
                         setFormData({ ...formData, name: e.target.value }),
@@ -113,6 +116,7 @@ export default function UserProfile() {
                     inputProps={{
                       multiline: true,
                       rows: 5,
+                      "data-testid": "description-input",
                       onChange: (e) =>
                         setFormData({
                           ...formData,
@@ -124,7 +128,11 @@ export default function UserProfile() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary" onClick={() => setUserData(formData)}>
+              <Button
+                color="primary"
+                data-testid="submit-button"
+                onClick={() => setUserData(formData)}
+              >
                 Update Profile
               </Button>
             </CardFooter>
@@ -160,6 +168,7 @@ export default function UserProfile() {
                       fullWidth: true,
                     }}
                     inputProps={{
+                      "data-testid": "github-profile-input",
                       onChange: (e) => setGithubProfile(e.target.value),
                     }}
                   />
